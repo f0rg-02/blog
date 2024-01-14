@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "templates/general template.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -148,10 +148,12 @@
   },
   "active": "0acb6bd660b2029e",
   "lastOpenFiles": [
+    "Opinions/current_hardware_sucks.md",
+    "templates/general template.md",
+    "templates",
     "templates/general template.md",
     "about/aboutme.md",
     "_index.md",
-    "Opinions/current_hardware_sucks.md",
     "templates",
     "about/_index.md",
     "about",
