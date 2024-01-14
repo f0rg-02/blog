@@ -118,7 +118,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_index.md"
+              }
             }
           }
         ]
@@ -138,8 +140,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd1390ee82b3b1cd",
+  "active": "5754b8f4243cda6d",
   "lastOpenFiles": [
+    "About/index.md",
+    "Opinions/index.md",
     "_index.md",
     "Current Hardware Sucks.md",
     "Opinions/Current Hardware Sucks.md",
