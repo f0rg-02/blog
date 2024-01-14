@@ -1,13 +1,13 @@
 baseURL = 'https://f0rg-02.github.io/blog'
 languageCode = "en-us"
-title = "f0rg's boring blog"
+title = "f0rg's blog"
 theme = ["m10c"]
 
 
 [params]
   avatar = "img/avatar.webp"
   author = "Alex"
-  description = "A blog about whatever I feel like writing."
+  description = "A blog about whatever I feel like writing. This can range from rants/opinions, hardware, infosec, food, backpacks, etc."
 
   [[params.social]]
     icon = "github"
