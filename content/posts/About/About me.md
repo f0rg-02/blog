@@ -2,6 +2,9 @@
 title = 'About me'
 date = 2024-01-13T21:45:38-05:00
 draft = false
+url = "/about/"
+[_build]
+  list = 'never'
 +++
 
 Who am I (cliche I know):

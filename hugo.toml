@@ -22,15 +22,16 @@ theme = ["m10c"]
 [permalinks]
 	[permalinks.page]
 		posts = '/articles/:year/:month/:slug/'
-		about = '/About/:slug/'
 	[permalinks.section]
     		posts = '/articles/'
-    		about = '/about/'
-
 	
 [menus]
 [[menus.main]]
     name = 'Home'
     pageRef = '/'
     weight = 1
+[[menus.main]]
+    name = 'About'
+    pageRef = '/about/'
+    wegight = 2
 

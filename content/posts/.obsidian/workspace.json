@@ -11,8 +11,12 @@
             "id": "bd1390ee82b3b1cd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "About/About me.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "About/About me.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "About/About me.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_index.md"
+                "file": "About/About me.md"
               }
             }
           }
@@ -140,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5754b8f4243cda6d",
+  "active": "bd1390ee82b3b1cd",
   "lastOpenFiles": [
     "Opinions/_index.md",
     "About/_index.md",
