@@ -1,0 +1,18 @@
+baseURL = 'https://f0rg-02.github.io/blog'
+languageCode = "en-us"
+title = "f0rg's boring blog"
+theme = ["github.com/setsevireon/photophobia"]
+
+[params]
+  author = "Alex"
+  description = "A blog about whatever I feel like writing."
+
+  [[params.social]]
+    icon = "github"
+    name = "GitHub"
+    url = "https://github.com/f0rg-02"
+
+  [[params.social]]
+    icon = "mastodon"
+    name = "Mastodon"
+    url = "https://infosec.exchange/@alex_02"
