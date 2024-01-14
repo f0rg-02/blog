@@ -1,0 +1,806 @@
+<!doctype html><html lang=en-us><head><title>Terminals // f0rg's blog</title>
+<link rel="shortcut icon" href=/favicon.ico><meta charset=utf-8><meta name=generator content="Hugo 0.121.2"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Alex"><meta name=description content><link rel=stylesheet href=/blog/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css><meta name=twitter:card content="summary"><meta name=twitter:title content="Terminals"><meta name=twitter:description content="NOTE: I decided to add both links and also paste configs. So there is a lot of &ldquo;useless&rdquo; stuff in here, but I think having a variety is important.
+My Scattered Thoughts: I love Linux. You can do anything with it, but most importantly that there are usually many options for one thing like terminals that there is something for everyone. After way too many times spent on computers (I really should go outside more, but the weather is shit right now), I&rsquo;ve come up with a workflow and environment that works for me."><meta property="og:title" content="Terminals"><meta property="og:description" content="NOTE: I decided to add both links and also paste configs. So there is a lot of &ldquo;useless&rdquo; stuff in here, but I think having a variety is important.
+My Scattered Thoughts: I love Linux. You can do anything with it, but most importantly that there are usually many options for one thing like terminals that there is something for everyone. After way too many times spent on computers (I really should go outside more, but the weather is shit right now), I&rsquo;ve come up with a workflow and environment that works for me."><meta property="og:type" content="article"><meta property="og:url" content="https://f0rg-02.github.io/blog/posts/linux/terminals/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-01-14T15:45:21-05:00"><meta property="article:modified_time" content="2024-01-14T15:45:21-05:00"></head><body><header class=app-header><a href=https://f0rg-02.github.io/blog><img class=app-header-avatar src=/blog/img/avatar.webp alt=Alex></a>
+<span class=app-header-title>f0rg's blog</span><nav class=app-header-menu><a class=app-header-menu-item href=/blog/>Home</a>
+-
+<a class=app-header-menu-item href=/blog/about>About</a></nav><p>A blog about whatever I feel like writing. This can range from rants/opinions, hardware, infosec, food, backpacks, etc.</p><div class=app-header-social><a href=https://github.com/f0rg-02 target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a href=https://infosec.exchange/@alex_02 target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></div></header><main class=app-container><article class=post><header class=post-header><h1 class=post-title>Terminals</h1><div class=post-meta><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jan 14, 2024</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18 min read</div></div></header><div class=post-content><p><strong>NOTE: I decided to add both links and also paste configs. So there is a lot of &ldquo;useless&rdquo; stuff in here, but I think having a variety is important.</strong></p><hr><h2 id=umy-scattered-thoughtsu>My Scattered Thoughts:</h2><p>I love Linux. You can do anything with it, but most importantly that there are usually many options for one thing like terminals that there is something for everyone. After way too many times spent on computers (I really should go outside more, but the weather is shit right now), I&rsquo;ve come up with a workflow and environment that works for me. Even though I&rsquo;m constantly tweaking and modifying my setups to this day, I have found things that I prefer over others. One of these are terminals. I&rsquo;ve probably tried every single terminal that I could find. My criteria is usually very simple, lightweight and pretty customization. Of course I don&rsquo;t use every single feature of the terminals I usually use and I try to make it &ldquo;pretty&rdquo;, but this isn&rsquo;t a necessity since making it pretty usually relies on if it is easier on my eyes and more of usability than just using an over bloated pile of on fire garbage. Anyways, enough ranting and my coffee is still kicking in, but here is what works for me and what I&rsquo;ve learned over the years.</p><hr><h2 id=uthe-beginningu>The beginning:</h2><p>When I first started running and using Linux, I didn&rsquo;t understand how to customize my Linux install to get rid of the annoying bloatware and other annoyances, but as I got annoyed with DE&rsquo;s like GNOME and KDE with their crap environments, I&rsquo;ve used a combination of search engines and way too many hours spent breaking Linux. Now, I finally figured out operating systems that I prefer for what tasks and also programs and utils that I also prefer over others.</p><p>For terminals I currently use a combination of Tmux, Tilix, urxvt, and most recently kitty. When I was setting up my Desktop, since I didn&rsquo;t have the battery or my laptop being bogged down by bloat, I had more freedom to try out more programs that could take up more resources depending on what I was doing.</p><hr><h4 id=ukittyu>kitty:</h4><p>I decided to give kitty and try. At first it was ugly and pretty much useless for me, but after a bit of reading and ripping configs, I&rsquo;ve managed to get it a bit more customized and figured out some of the keyboard shortcuts that I would use. The documentation is better than most: <a href=https://sw.kovidgoyal.net/kitty/overview/>https://sw.kovidgoyal.net/kitty/overview/</a> and is definitely a must to be read, but I mostly just used it for shortcuts and figuring out where the config is supposed to be (I have mine in <code>~/.config/kitty/kitty.conf</code>)</p><p>Now my current kitty config:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span>foreground <span style=color:#75715e>#a9b1d6</span>
+</span></span><span style=display:flex><span>background <span style=color:#75715e>#1a1b26</span>
+</span></span><span style=display:flex><span>cursor <span style=color:#75715e>#a9b1d6</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color0 <span style=color:#75715e>#1a1b26</span>
+</span></span><span style=display:flex><span>color8 <span style=color:#75715e>#4e5173</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color1 <span style=color:#75715e>#F7768E</span>
+</span></span><span style=display:flex><span>color9 <span style=color:#75715e>#F7768E</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color2 <span style=color:#75715e>#9ECE6A</span>
+</span></span><span style=display:flex><span>color10 <span style=color:#75715e>#9ECE6A</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color3 <span style=color:#75715e>#E0AF68</span>
+</span></span><span style=display:flex><span>color11 <span style=color:#75715e>#E0AF68</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color4 <span style=color:#75715e>#7AA2F7</span>
+</span></span><span style=display:flex><span>color12 <span style=color:#75715e>#7AA2F7</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color5 <span style=color:#75715e>#9a7ecc</span>
+</span></span><span style=display:flex><span>color13 <span style=color:#75715e>#9a7ecc</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color6 <span style=color:#75715e>#4abaaf</span>
+</span></span><span style=display:flex><span>color14 <span style=color:#75715e>#4abaaf</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>color7 <span style=color:#75715e>#acb0d0</span>
+</span></span><span style=display:flex><span>color15 <span style=color:#75715e>#acb0d0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Cursor</span>
+</span></span><span style=display:flex><span>cursor_shape     							underline
+</span></span><span style=display:flex><span>cursor_blink_interval     					<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>cursor_stop_blinking_after 			<span style=color:#ae81ff>15</span><span style=color:#f92672>.</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Scrollback</span>
+</span></span><span style=display:flex><span>scrollback_lines 							<span style=color:#ae81ff>10000</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Window</span>
+</span></span><span style=display:flex><span>remember_window_size   				no
+</span></span><span style=display:flex><span>initial_window_width   					<span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>initial_window_height  					<span style=color:#ae81ff>400</span>
+</span></span><span style=display:flex><span>window_border_width 					<span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>window_margin_width 					<span style=color:#ae81ff>12</span>
+</span></span><span style=display:flex><span>window_padding_width 					<span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>inactive_text_alpha 						<span style=color:#ae81ff>1</span><span style=color:#f92672>.</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>background_opacity 						<span style=color:#f92672>.</span><span style=color:#ae81ff>95</span>
+</span></span><span style=display:flex><span>placement_strategy 						center
+</span></span><span style=display:flex><span>hide_window_decorations 				no
+</span></span></code></pre></div><p>It works for what I want and matches the &ldquo;theme&rdquo; of my xfce4 desktop environment. I only really use this on my desktop. On my laptop I did switch to this config and kitty from urxvt, but I will probably switch back to urxvt which is another terminal that when configured is pretty neat. The only reason I switched to kitty was because of ohmyphosh wasn&rsquo;t showing the glyphs of the &ldquo;icons&rdquo;, but on my laptop I will probably switch to a minimal theme and change the terminal back to urxvt. That configuration came mostly from this openbox wm dotfiles: <a href=https://github.com/owl4ce/dotfiles>https://github.com/owl4ce/dotfiles</a></p><hr><h4 id=uurxvtu>urxvt:</h4><p>This terminal requires configuration, but after a bit of tweaking and messing around, it is very good and has a lot of features all offered in a lightweight format.</p><p>urxvt has been configured to fit my needs and yes, I use configs posted on github because time is money and I just want a nice environment setup and working, but anyways, for urxvt you edit <code>~/.Xresources</code> file to configure your terminal and after everything change, you have to run <code>xrdb ~/.Xresources</code> instead of logging in and out. The default config for the dotfiles are here: <a href=https://github.com/owl4ce/dotfiles/blob/ng/.Xresources>https://github.com/owl4ce/dotfiles/blob/ng/.Xresources</a></p><p>It is beautiful. The config pasted is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> X resource database<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#e6db74>https</span>:<span style=color:#e6db74>//</span>github<span style=color:#f92672>.</span>com<span style=color:#f92672>/</span>owl4ce<span style=color:#f92672>/</span>dotfiles
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>URxvt</span> configuration<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>font:                       <span style=color:#e6db74>xft</span>:mplus <span style=color:#66d9ef>Nerd</span> <span style=color:#66d9ef>Font</span> <span style=color:#e6db74>Mono</span>:size<span style=color:#f92672>=</span><span style=color:#ae81ff>11</span><span style=color:#e6db74>:autohint</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>,\
+</span></span><span style=display:flex><span>                                  <span style=color:#e6db74>xft</span>:<span style=color:#66d9ef>Noto</span> <span style=color:#66d9ef>Color</span> <span style=color:#e6db74>Emoji</span>:size<span style=color:#f92672>=</span><span style=color:#ae81ff>9</span><span style=color:#e6db74>:antialias</span><span style=color:#f92672>=</span><span style=color:#66d9ef>false</span>,\
+</span></span><span style=display:flex><span>                                  <span style=color:#e6db74>xft</span>:<span style=color:#e6db74>Monospace</span>:size<span style=color:#f92672>=</span><span style=color:#ae81ff>11</span><span style=color:#e6db74>:autohint</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>,\
+</span></span><span style=display:flex><span>                                  <span style=color:#e6db74>xft</span>:<span style=color:#e6db74>Unifont</span>:size<span style=color:#f92672>=</span><span style=color:#ae81ff>11</span><span style=color:#e6db74>:autohint</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>geometry:                   <span style=color:#ae81ff>84</span>x16
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>internalBorder:             <span style=color:#ae81ff>20</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>cursorBlink:                <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>cursorUnderline:            <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>saveLines:                  <span style=color:#ae81ff>8192</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>scrollBar:                  <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>scrollBar_right:            <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>scrollBar_floating:         <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>scrollstyle:                plain
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>scrollWithBuffer:           <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>urgentOnBell:               <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>depth:                      <span style=color:#ae81ff>32</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>iso14755:                   <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>iconFile:                   <span style=color:#e6db74>/home/use</span>rname<span style=color:#f92672>/.</span>icons<span style=color:#f92672>/</span><span style=color:#66d9ef>Gladient</span><span style=color:#f92672>/</span>terminal<span style=color:#f92672>.</span>png
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Uncomment</span> below <span style=color:#66d9ef>if</span> too much font spacing, <span style=color:#f92672>and</span> fix glyphs performance issues<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>letterSpace:                <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>skipBuiltinGlyphs:          <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Disable</span> printing the terminal contents <span style=color:#66d9ef>when</span> pressing <span style=color:#66d9ef>PrintScreen</span><span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>The</span> strings will be interpreted as <span style=color:#66d9ef>if</span> typed into the shell as<span style=color:#f92672>-</span>is<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>print<span style=color:#f92672>-</span><span style=color:#e6db74>pipe</span>:                 <span style=color:#e6db74>&#34;cat &gt;/dev/null&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Clear</span> the scrollback buffer cleanly, the shell built<span style=color:#f92672>-</span><span style=color:#66d9ef>in</span> sequence replacement<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>L</span>:     <span style=color:#e6db74>command</span>:\<span style=color:#ae81ff>033</span>c
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>URxvt</span> extensions<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>perl<span style=color:#f92672>-</span>ext<span style=color:#f92672>-</span><span style=color:#e6db74>common</span>:            default,matcher,resize<span style=color:#f92672>-</span>font,tabbedex
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Eval</span> built<span style=color:#f92672>-</span><span style=color:#66d9ef>in</span> extension<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>C</span>:     eval<span style=color:#e6db74>:selection_to_clipboard</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>V</span>:     eval<span style=color:#e6db74>:paste_clipboard</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>Up</span>:          eval<span style=color:#e6db74>:scroll_up</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>Down</span>:        eval<span style=color:#e6db74>:scroll_down</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>Home</span>:        eval<span style=color:#e6db74>:scroll_to_top</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>End</span>:         eval<span style=color:#e6db74>:scroll_to_bottom</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Matcher</span> built<span style=color:#f92672>-</span><span style=color:#66d9ef>in</span> extension<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>U</span>:     <span style=color:#e6db74>matcher</span>:select
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>url<span style=color:#f92672>-</span><span style=color:#e6db74>launcher</span>:               your_web_browser
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>matcher<span style=color:#f92672>.</span>button:             <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>matcher<span style=color:#f92672>.</span>rend<span style=color:#f92672>.</span><span style=color:#ae81ff>0</span>:             <span style=color:#66d9ef>Uline</span> fg7
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Resize</span><span style=color:#f92672>-</span>font extension<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>minus</span>:       resize<span style=color:#f92672>-</span><span style=color:#e6db74>font</span>:smaller
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>plus</span>:        resize<span style=color:#f92672>-</span><span style=color:#e6db74>font</span>:bigger
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>equal</span>:       resize<span style=color:#f92672>-</span><span style=color:#e6db74>font</span>:reset
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>question</span>:    resize<span style=color:#f92672>-</span><span style=color:#e6db74>font</span>:show
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>resize<span style=color:#f92672>-</span>font<span style=color:#f92672>.</span>step:           <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Tabbed</span><span style=color:#f92672>-</span>extended extension<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>no<span style=color:#f92672>-</span>tabbedex<span style=color:#f92672>-</span><span style=color:#e6db74>keys</span>:  yes
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>new<span style=color:#f92672>-</span><span style=color:#e6db74>button</span>:        <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URXvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>reopen<span style=color:#f92672>-</span>on<span style=color:#f92672>-</span><span style=color:#e6db74>close</span>:   yes
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>autohide:          yes
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>tabbar<span style=color:#f92672>-</span><span style=color:#e6db74>fg</span>:         <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>tabbar<span style=color:#f92672>-</span><span style=color:#e6db74>bg</span>:         <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>tab<span style=color:#f92672>-</span><span style=color:#e6db74>fg</span>:            <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>tab<span style=color:#f92672>-</span><span style=color:#e6db74>bg</span>:            <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>bell<span style=color:#f92672>-</span><span style=color:#e6db74>fg</span>:           <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>bell<span style=color:#f92672>-</span><span style=color:#e6db74>bg</span>:           <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>bell<span style=color:#f92672>-</span>tab<span style=color:#f92672>-</span><span style=color:#e6db74>fg</span>:       <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>bell<span style=color:#f92672>-</span>tab<span style=color:#f92672>-</span><span style=color:#e6db74>bg</span>:       <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>title<span style=color:#f92672>-</span><span style=color:#e6db74>fg</span>:          <span style=color:#ae81ff>7</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>tabbedex<span style=color:#f92672>.</span>title<span style=color:#f92672>-</span><span style=color:#e6db74>bg</span>:          <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>T</span>:     <span style=color:#e6db74>tabbedex</span>:new_tab
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>R</span>:     <span style=color:#e6db74>tabbedex</span>:rename_tab
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>W</span>:     <span style=color:#e6db74>tabbedex</span>:kill_tab
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>Next</span>:        <span style=color:#e6db74>tabbedex</span>:next_tab
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#e6db74>Prior</span>:       <span style=color:#e6db74>tabbedex</span>:prev_tab
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>Next</span>:  <span style=color:#e6db74>tabbedex</span>:move_tab_right
+</span></span><span style=display:flex><span><span style=color:#66d9ef>URxvt</span><span style=color:#f92672>.</span>keysym<span style=color:#f92672>.</span>Control<span style=color:#f92672>-</span><span style=color:#66d9ef>Shift</span><span style=color:#f92672>-</span><span style=color:#e6db74>Prior</span>: <span style=color:#e6db74>tabbedex</span>:move_tab_left
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Color</span> schemes<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define black0                    [97]#373E4D</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define black1                    #3B4252</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define black2                    #434C5E</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define black3                    #4C566A</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define red0                      #FA5AA4</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define red1                      #FA74B2</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define green0                    #2BE491</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define green1                    #44EB9F</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define yellow0                   #FA946E</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define yellow1                   #FAA687</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define blue0                     #63C5EA</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define blue1                     #7ACBEA</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define magenta0                  #CF8EF4</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define magenta1                  #D8A6F4</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define cyan0                     #89CCF7</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define cyan1                     #A1D5F7</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define white0                    [100]#F9F9F9</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define white1                    #F7F7F7</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define white2                    #F4F4F4</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color1:                         red0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color2:                         green0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color3:                         yellow0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color4:                         blue0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color5:                         magenta0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color6:                         cyan0
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color9:                         red1
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color10:                        green1
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color11:                        yellow1
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color12:                        blue1
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color13:                        magenta1
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color14:                        cyan1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span> <span style=color:#66d9ef>Used</span> by <span style=color:#e6db74>`terminal-set.sh`</span>, <span style=color:#66d9ef>do</span> <span style=color:#f92672>not</span> change the following configuration<span style=color:#f92672>.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>foreground:                     white0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>background:                     black0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>cursorColor:                    white0
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>borderColor:                    black0
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color0:                         black2
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color7:                         white1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color8:                         black3
+</span></span><span style=display:flex><span><span style=color:#f92672>*.</span>color15:                        white2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>foreground:                     black0
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>background:                     white0
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>cursorColor:                    black0
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>borderColor:                    white0
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>color0:                         white1
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>color7:                         black2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>color8:                         white2
+</span></span><span style=display:flex><span><span style=color:#f92672>!*.</span>color15:                        black3
+</span></span></code></pre></div><p>You have to change a few settings like the part that says <code>username</code> and change it to your username. In my case it is <code>alex</code>, but after a few simple tweaks it works and works well. I love simplicity if you haven&rsquo;t noticed so I keep things mostly simple and clean. urxvt fits the bill usually and works quite well with my openbox configuration which uses mostly keyboard shortcuts that are configured in <code>rc.xml</code>, but that is another post for another time. but on my server and most of my headless boards I use tmux heavily</p><hr><h4 id=utmuxu>tmux:</h4><p>Tmux is pretty neat and very useful on servers or headless computers. The reason being is you can run multiple terminals without needing as desktop environment. You can also create more windows in the session with shortcut <code>ctrl + b</code> (release after this before pressing the next key) and than press <code>c</code> with the ability to switch windows using <code>ctrl + b</code> and after releasing press <code>s</code> which is super useful when running multiple different things that shouldn&rsquo;t be exited once I leave the ssh session. My config is mostly the default and I really can&rsquo;t be bothered to modify it any further since I use it to just run programs and tasks that I don&rsquo;t want to run in the background via service files or whatnot so I can usually see what is going on and any errors that could be outputted to terminal or if I want a more &ldquo;interactive&rdquo; terminal while I&rsquo;m testing things on bare metal or similar.</p><p>Tmux has many uses such as using tmux with socat to handle multiple shells using &ldquo;dumb&rdquo; pipes. My note for this can be found here: <a href=https://github.com/f0rg-02/Notes/blob/main/Linux/Bash/Socat%20Tmux%20Setup.md>https://github.com/f0rg-02/Notes/blob/main/Linux/Bash/Socat%20Tmux%20Setup.md</a></p><p>Original post I used is: <a href=https://systemoverlord.com/2018/01/20/socat-as-a-handler-for-multiple-reverse-shells.html>https://systemoverlord.com/2018/01/20/socat-as-a-handler-for-multiple-reverse-shells.html</a> and is definitely a read.</p><p>The script:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>SOCKDIR<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>mktemp -d<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>SOCKF<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>SOCKDIR<span style=color:#e6db74>}</span>/usock
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Start tmux, if needed</span>
+</span></span><span style=display:flex><span>tmux start
+</span></span><span style=display:flex><span><span style=color:#75715e># Create window</span>
+</span></span><span style=display:flex><span>tmux new-window <span style=color:#e6db74>&#34;socat UNIX-LISTEN:</span><span style=color:#e6db74>${</span>SOCKF<span style=color:#e6db74>}</span><span style=color:#e6db74>,umask=0077 STDIO&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Wait for socket</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> test ! -e <span style=color:#e6db74>${</span>SOCKF<span style=color:#e6db74>}</span> ; <span style=color:#66d9ef>do</span> sleep <span style=color:#ae81ff>1</span> ; <span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Use socat to ship data between the unix socket and STDIO.</span>
+</span></span><span style=display:flex><span>exec socat STDIO UNIX-CONNECT:<span style=color:#e6db74>${</span>SOCKF<span style=color:#e6db74>}</span>
+</span></span></code></pre></div><p>Socat command:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>socat OPENSSL-LISTEN:4443,cert<span style=color:#f92672>=</span>bind.pem,reuseaddr,verify<span style=color:#f92672>=</span>0,fork EXEC:./socat_tmux.sh
+</span></span></code></pre></div><p>Very useful and I definitely recommend exploring what you can do.</p><hr><h4 id=utilixu>Tilix:</h4><p>Tilix is a somewhat different terminal. It lets you split multiple windows in one terminal window. I use this mostly on my x270 since the screen is 12.5 inches which is great for how lightweight and small it is, but this also means I don&rsquo;t have a lot of screen to work with so I prefer to use the screen space I do have to its best. This is where Tilix came in. I have it set as a keyboard shortcut along with my regular default terminal. This way I can use both if I want to. The reason for this is because I use Tilix mostly for when I&rsquo;m testing and working on my servers, but also if I&rsquo;m running a program or tools and I want to have splitted terminals so I can run multiple things and able to quickly switch and also see what is going on. This avoids having clutters of multiple terminals with multiple tabs and getting them mixed up.</p><p>Also, editing it is pretty easy since it is json files in <code>$HOME/.config/tilix/schemes</code> and pretty straight forward. I found a tokyo night theme that I like and works well with the rest of my environment.</p><p><strong>NOTE:Notice a theme? My eyes burn regardless, but I use gentler and darker colors to help with eye strain. I do recommend getting glasses with the blue filter to help reduce eye strain even more. I bought mine off of Zenni&rsquo;s Optical and I went with the more expensive, but very effective blue filter. This is a shameless promotion of Zenni&rsquo;s. I recommend everyone check them out and you can even get glasses without a prescription without paying $200+ for a pair.</strong></p><p>My config on my desktop is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;Tokyo Night&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;comment&#34;</span>: <span style=color:#e6db74>&#34;Theme that celebrates the lights of Downtown Tokyo at night.&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;use-theme-colors&#34;</span>: <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;foreground-color&#34;</span>: <span style=color:#e6db74>&#34;#a9b1d6&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;background-color&#34;</span>: <span style=color:#e6db74>&#34;#1a1b26&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;palette&#34;</span>: [
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#1a1b26&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#f7768e&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#9ece6a&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#e0af68&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#7aa2f7&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#bb9af7&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#73daca&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#a9b1d6&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#565f89&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#f7768e&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#9ece6a&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#e0af68&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#7aa2f7&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#bb9af7&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#73daca&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;#cfc9c2&#34;</span>
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>I did export my config from tilix after I set my layout and my keyboard shortcut is set to: <code>tilix -s /home/alex/.config/tilix/default_session_layout.json</code></p><p>The config pasted is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;child&#34;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;child1&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;directory&#34;</span>: <span style=color:#e6db74>&#34;\/home\/alex&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;height&#34;</span>: <span style=color:#ae81ff>687</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;profile&#34;</span>: <span style=color:#e6db74>&#34;2b7c4080-0ddd-46c5-8f23-563fd3ba789d&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;readOnly&#34;</span>: <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;synchronizedInput&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Terminal&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;uuid&#34;</span>: <span style=color:#e6db74>&#34;d27b2f5b-7d55-4ef5-aed0-3e50d0b3e264&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;width&#34;</span>: <span style=color:#ae81ff>566</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;child2&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;child1&#34;</span>: {
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;directory&#34;</span>: <span style=color:#e6db74>&#34;\/home\/alex&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;height&#34;</span>: <span style=color:#ae81ff>343</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;profile&#34;</span>: <span style=color:#e6db74>&#34;2b7c4080-0ddd-46c5-8f23-563fd3ba789d&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;readOnly&#34;</span>: <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;synchronizedInput&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Terminal&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;uuid&#34;</span>: <span style=color:#e6db74>&#34;9bf1f91f-3889-4572-8111-88adf7af8365&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;width&#34;</span>: <span style=color:#ae81ff>565</span>
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;child2&#34;</span>: {
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;directory&#34;</span>: <span style=color:#e6db74>&#34;\/home\/alex&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;height&#34;</span>: <span style=color:#ae81ff>343</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;profile&#34;</span>: <span style=color:#e6db74>&#34;2b7c4080-0ddd-46c5-8f23-563fd3ba789d&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;readOnly&#34;</span>: <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;synchronizedInput&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Terminal&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;uuid&#34;</span>: <span style=color:#e6db74>&#34;cc3632ff-5bf9-45f4-91de-fec8aa7cf021&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;width&#34;</span>: <span style=color:#ae81ff>565</span>
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;orientation&#34;</span>: <span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;position&#34;</span>: <span style=color:#ae81ff>49</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;ratio&#34;</span>: <span style=color:#ae81ff>0.499272197962154274</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Paned&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;orientation&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;position&#34;</span>: <span style=color:#ae81ff>50</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;ratio&#34;</span>: <span style=color:#ae81ff>0.5</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Paned&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;height&#34;</span>: <span style=color:#ae81ff>687</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;${title}&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;synchronizedInput&#34;</span>: <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Session&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;uuid&#34;</span>: <span style=color:#e6db74>&#34;e1fa2f38-5aff-4a98-af4f-9e56099048bb&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#e6db74>&#34;1.0&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;width&#34;</span>: <span style=color:#ae81ff>1132</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h4 id=ua-tweak-ohmyphosh-u>A tweak: ohmyphosh</h4><p>I mentioned ohmyphosh briefly earlier and I have to say, it makes my terminal look cooler and for the most part is pretty useless for me or I think I just don&rsquo;t use it as intended, but I do like it. The <a href=https://ohmyposh.dev/>homepage</a> describes it as &ldquo;a prompt theme engine for any shell&rdquo; which is on point, but also can be pretty useful to a certain point. Install is pretty easy and I use the &ldquo;manual&rdquo; installation for Linux: <a href=https://ohmyposh.dev/docs/installation/linux>https://ohmyposh.dev/docs/installation/linux</a></p><p>which is just a curl command and piping to run with bash. I should note it does require running as root/sudo and I&rsquo;m a stickler to avoiding switching to root as much as possible so the command I use is slightly modified: <code>curl -s https://ohmyposh.dev/install.sh | sudo bash -s</code></p><p>The script pasted:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env sh
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>install_dir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>themes_dir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>executable<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>error<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    printf <span style=color:#e6db74>&#34;\x1b[31m</span>$1<span style=color:#e6db74>\e[0m\n&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>info<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    printf <span style=color:#e6db74>&#34;</span>$1<span style=color:#e6db74>\n&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>warn<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    printf <span style=color:#e6db74>&#34;⚠️  \x1b[33m</span>$1<span style=color:#e6db74>\e[0m\n&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>help<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Display Help</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;Install script for Oh My Posh&#34;</span>
+</span></span><span style=display:flex><span>    echo
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;Syntax: install.sh [-h|d|t]&#34;</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;\noptions:&#34;</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;-h     Print this help.&#34;</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;-d     Specify the installation directory. Defaults to /usr/local/bin or the directory where oh-my-posh is installed.&#34;</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;-t     Specify the themes installation directory. Defaults to the oh-my-posh cache directory.&#34;</span>
+</span></span><span style=display:flex><span>    echo
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> getopts <span style=color:#e6db74>&#34;:hd:t:&#34;</span> option; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>case</span> $option in
+</span></span><span style=display:flex><span>      h<span style=color:#f92672>)</span> <span style=color:#75715e># display Help</span>
+</span></span><span style=display:flex><span>         help
+</span></span><span style=display:flex><span>         exit;;
+</span></span><span style=display:flex><span>      d<span style=color:#f92672>)</span> <span style=color:#75715e># Enter a name</span>
+</span></span><span style=display:flex><span>         install_dir<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>OPTARG<span style=color:#e6db74>}</span>;;
+</span></span><span style=display:flex><span>      t<span style=color:#f92672>)</span> <span style=color:#75715e># themes directory</span>
+</span></span><span style=display:flex><span>         themes_dir<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>OPTARG<span style=color:#e6db74>}</span>;;
+</span></span><span style=display:flex><span>     <span style=color:#ae81ff>\?</span><span style=color:#f92672>)</span> <span style=color:#75715e># Invalid option</span>
+</span></span><span style=display:flex><span>         echo <span style=color:#e6db74>&#34;Invalid option command line option. Use -h for help.&#34;</span>
+</span></span><span style=display:flex><span>         exit <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>esac</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>SUPPORTED_TARGETS<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;linux-386 linux-amd64 linux-arm linux-arm64 darwin-amd64 darwin-arm64 freebsd-386 freebsd-amd64 freebsd-arm freebsd-arm64&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>validate_dependency<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> ! command -v $1 &gt;/dev/null; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;</span>$1<span style=color:#e6db74> is required to install Oh My Posh. Please install </span>$1<span style=color:#e6db74> and try again.\n&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>validate_dependencies<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    validate_dependency curl
+</span></span><span style=display:flex><span>    validate_dependency unzip
+</span></span><span style=display:flex><span>    validate_dependency realpath
+</span></span><span style=display:flex><span>    validate_dependency dirname
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>set_install_directory<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -n <span style=color:#e6db74>&#34;</span>$install_dir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># expand directory</span>
+</span></span><span style=display:flex><span>        install_dir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>install_dir/#<span style=color:#ae81ff>\~</span>/$HOME<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># check if we have oh-my-posh installed, if so, use the executable directory</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># to install into and follow symlinks</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> command -v oh-my-posh &gt;/dev/null; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        posh_dir<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>command -v oh-my-posh<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>        real_dir<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>realpath $posh_dir<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>        install_dir<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>dirname $real_dir<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>        info <span style=color:#e6db74>&#34;Oh My Posh is already installed, updating existing installation in:&#34;</span>
+</span></span><span style=display:flex><span>        info <span style=color:#e6db74>&#34;  </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>        install_dir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/usr/local/bin&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>validate_install_directory<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> ! -d <span style=color:#e6db74>&#34;</span>$install_dir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;Directory </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74> does not exist, set a different directory and try again.&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># check if we can write to the install directory</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> ! -w $install_dir <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;Cannot write to </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>. Please set a different directory and try again: \n  curl -s https://ohmyposh.dev/install.sh | bash -s -- -d {directory}&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># check if the directory is in the PATH</span>
+</span></span><span style=display:flex><span>    good<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>
+</span></span><span style=display:flex><span>        IFS<span style=color:#f92672>=</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> path in $PATH; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>path%/<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>            printf <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            break
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>good<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;1&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        warn <span style=color:#e6db74>&#34;Installation directory </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74> is not in your \$PATH&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>validate_themes_directory<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> ! -d <span style=color:#e6db74>&#34;</span>$install_dir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;Directory </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74> does not exist, set a different directory and try again.&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># check if we can write to the install directory</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> ! -w $install_dir <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;Cannot write to </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>. Please set a different directory and try again: \n  curl -s https://ohmyposh.dev/install.sh | bash -s -- -d {directory}&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># check if the directory is in the PATH</span>
+</span></span><span style=display:flex><span>    good<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>
+</span></span><span style=display:flex><span>        IFS<span style=color:#f92672>=</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> path in $PATH; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>path%/<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>            printf <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            break
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>good<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;1&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        warn <span style=color:#e6db74>&#34;Installation directory </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74> is not in your \$PATH&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>install_themes<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -n <span style=color:#e6db74>&#34;</span>$themes_dir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># expand directory</span>
+</span></span><span style=display:flex><span>        themes_dir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>themes_dir/#<span style=color:#ae81ff>\~</span>/$HOME<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    cache_dir<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>$executable cache path<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># validate if the user set the path to the themes directory</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -z <span style=color:#e6db74>&#34;</span>$themes_dir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        themes_dir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>cache_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>/themes&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Validate if the themes directory exists</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> ! -d <span style=color:#e6db74>&#34;</span>$themes_dir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        mkdir -p $themes_dir
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    info <span style=color:#e6db74>&#34;🎨 Installing oh-my-posh themes in </span><span style=color:#e6db74>${</span>themes_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>\n&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    zip_file<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>cache_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>/themes.zip&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    url<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    http_response<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>curl -s -f -L $url -o $zip_file -w <span style=color:#e6db74>&#34;%{http_code}&#34;</span><span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $http_response <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;200&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>[</span> -f $zip_file <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        unzip -o -q $zip_file -d $themes_dir
+</span></span><span style=display:flex><span>        <span style=color:#75715e># make sure the files are readable and writable for all users</span>
+</span></span><span style=display:flex><span>        chmod a+rwX <span style=color:#e6db74>${</span>themes_dir<span style=color:#e6db74>}</span>/*.omp.*
+</span></span><span style=display:flex><span>        rm $zip_file
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>        warn <span style=color:#e6db74>&#34;Unable to download themes at </span><span style=color:#e6db74>${</span>url<span style=color:#e6db74>}</span><span style=color:#e6db74>\nPlease validate your curl, connection and/or proxy settings&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>install<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    arch<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>detect_arch<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>    platform<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>detect_platform<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>    target<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>platform<span style=color:#e6db74>}</span><span style=color:#e6db74>-</span><span style=color:#e6db74>${</span>arch<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    good<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>
+</span></span><span style=display:flex><span>        IFS<span style=color:#f92672>=</span><span style=color:#e6db74>&#34; &#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> t in $SUPPORTED_TARGETS; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>t<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>target<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>            printf <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            break
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>good<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;1&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>arch<span style=color:#e6db74>}</span><span style=color:#e6db74> builds for </span><span style=color:#e6db74>${</span>platform<span style=color:#e6db74>}</span><span style=color:#e6db74> are not available for Oh My Posh&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    info <span style=color:#e6db74>&#34;\nℹ️  Installing oh-my-posh for </span><span style=color:#e6db74>${</span>target<span style=color:#e6db74>}</span><span style=color:#e6db74> in </span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    executable<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>install_dir<span style=color:#e6db74>}</span>/oh-my-posh
+</span></span><span style=display:flex><span>    url<span style=color:#f92672>=</span>https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-<span style=color:#e6db74>${</span>target<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    info <span style=color:#e6db74>&#34;⬇️  Downloading oh-my-posh from </span><span style=color:#e6db74>${</span>url<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    http_response<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>curl -s -f -L $url -o $executable -w <span style=color:#e6db74>&#34;%{http_code}&#34;</span><span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $http_response !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;200&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> <span style=color:#f92672>[</span> ! -f $executable <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        error <span style=color:#e6db74>&#34;Unable to download executable at </span><span style=color:#e6db74>${</span>url<span style=color:#e6db74>}</span><span style=color:#e6db74>\nPlease validate your curl, connection and/or proxy settings&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    chmod +x $executable
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    install_themes
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    info <span style=color:#e6db74>&#34;🚀 Installation complete.\n\nYou can follow the instructions at https://ohmyposh.dev/docs/installation/prompt&#34;</span>
+</span></span><span style=display:flex><span>    info <span style=color:#e6db74>&#34;to setup your shell to use oh-my-posh.&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $http_response <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;200&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        info <span style=color:#e6db74>&#34;\nIf you want to use a built-in theme, you can find them in the </span><span style=color:#e6db74>${</span>theme_dir<span style=color:#e6db74>}</span><span style=color:#e6db74> directory:&#34;</span>
+</span></span><span style=display:flex><span>        info <span style=color:#e6db74>&#34;  oh-my-posh init {shell} --config </span><span style=color:#e6db74>${</span>theme_dir<span style=color:#e6db74>}</span><span style=color:#e6db74>/{theme}.omp.json\n&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>detect_arch<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>  arch<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>uname -m | tr <span style=color:#e6db74>&#39;[:upper:]&#39;</span> <span style=color:#e6db74>&#39;[:lower:]&#39;</span><span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>arch<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> in
+</span></span><span style=display:flex><span>    x86_64<span style=color:#f92672>)</span> arch<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;amd64&#34;</span> ;;
+</span></span><span style=display:flex><span>    armv*<span style=color:#f92672>)</span> arch<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;arm&#34;</span> ;;
+</span></span><span style=display:flex><span>    arm64<span style=color:#f92672>)</span> arch<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;arm64&#34;</span> ;;
+</span></span><span style=display:flex><span>    aarch64<span style=color:#f92672>)</span> arch<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;arm64&#34;</span> ;;
+</span></span><span style=display:flex><span>    i686<span style=color:#f92672>)</span> arch<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;386&#34;</span> ;;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>esac</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>arch<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;arm64&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>getconf LONG_BIT<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span> -eq <span style=color:#ae81ff>32</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    arch<span style=color:#f92672>=</span>arm
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  printf <span style=color:#e6db74>&#39;%s&#39;</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>arch<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>detect_platform<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>  platform<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>uname -s | awk <span style=color:#e6db74>&#39;{print tolower($0)}&#39;</span><span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>platform<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> in
+</span></span><span style=display:flex><span>    linux<span style=color:#f92672>)</span> platform<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;linux&#34;</span> ;;
+</span></span><span style=display:flex><span>    darwin<span style=color:#f92672>)</span> platform<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;darwin&#34;</span> ;;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>esac</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  printf <span style=color:#e6db74>&#39;%s&#39;</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>platform<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>validate_dependencies
+</span></span><span style=display:flex><span>set_install_directory
+</span></span><span style=display:flex><span>validate_install_directory
+</span></span><span style=display:flex><span>install
+</span></span></code></pre></div><hr><p>I have the clean detailed configured on my laptop and desktop which is simple, nice, and does give useful information when I do look at the ohmyphosh prompt.</p><p>The clean detailed theme: <a href=https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/clean-detailed.omp.json>https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/clean-detailed.omp.json</a></p><p>And the paste:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;$schema&#34;</span>: <span style=color:#e6db74>&#34;https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;blocks&#34;</span>: [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;alignment&#34;</span>: <span style=color:#e6db74>&#34;left&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;newline&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;segments&#34;</span>: [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#FEF5ED&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#011627&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;leading_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b2&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;macos&#34;</span>: <span style=color:#e6db74>&#34;\uf179 &#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;ubuntu&#34;</span>: <span style=color:#e6db74>&#34;\uf31b &#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;windows&#34;</span>: <span style=color:#e6db74>&#34;\ue62a &#34;</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;diamond&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; {{ if .WSL }}WSL at {{ end }}{{.Icon}}&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;trailing_diamond&#34;</span>: <span style=color:#e6db74>&#34;&lt;transparent,#FEF5ED&gt;\ue0b2&lt;/&gt;&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;os&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#FEF5ED&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#011627&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;leading_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b2&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;diamond&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34;\uf489 {{ .Name }}&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;trailing_diamond&#34;</span>: <span style=color:#e6db74>&#34;&lt;transparent,#FEF5ED&gt;\ue0b2&lt;/&gt;&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;shell&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#516BEB&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#ffffff&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;leading_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b2&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;diamond&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34;\ue266 MEM: {{ round .PhysicalPercentUsed .Precision }}% | {{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB \ue266 &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;trailing_diamond&#34;</span>: <span style=color:#e6db74>&#34;&lt;transparent,#516BEB&gt;\ue0b2&lt;/&gt;&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;sysinfo&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#575656&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#d6deeb&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;leading_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b2&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;roundrock&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;threshold&#34;</span>: <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;diamond&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; {{ .FormattedMs }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;trailing_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;executiontime&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;prompt&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;alignment&#34;</span>: <span style=color:#e6db74>&#34;right&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;segments&#34;</span>: [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#17D7A0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#011627&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;leading_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b2&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;branch_icon&#34;</span>: <span style=color:#e6db74>&#34;\ue725 &#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_stash_count&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_status&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_upstream_icon&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_worktree_count&#34;</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;diamond&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;trailing_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;git&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;prompt&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;alignment&#34;</span>: <span style=color:#e6db74>&#34;left&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;newline&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;segments&#34;</span>: [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;plain&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34;\u256d\u2500&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;text&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;time_format&#34;</span>: <span style=color:#e6db74>&#34;15:04&#34;</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;plain&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \u2665 {{ .CurrentDate | date .Format }} |&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;time&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;plain&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \uf292 &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;root&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;folder_icon&#34;</span>: <span style=color:#e6db74>&#34;\uf07b &#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;folder_separator_icon&#34;</span>: <span style=color:#e6db74>&#34; \uf061 &#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;home_icon&#34;</span>: <span style=color:#e6db74>&#34;\ueb06 &#34;</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;plain&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; {{ .Path }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;path&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;prompt&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;alignment&#34;</span>: <span style=color:#e6db74>&#34;left&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;newline&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;segments&#34;</span>: [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;always_enabled&#34;</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;plain&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34;\u2570\u2500 &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;status&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;prompt&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  ],
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;console_title_template&#34;</span>: <span style=color:#e6db74>&#34;{{ .Folder }}&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;transient_prompt&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;transparent&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#FEF5ED&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34;\ue285 &#34;</span>
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>And to run it on every prompt that is opened I added this to my <code>.bashrc</code> :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>eval <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>oh-my-posh init bash --config /home/alex/.config/ohmyphosh/themes/clean-detailed.omp.json<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><p>For my server to help distinguish between that prompt and my host computer&rsquo;s prompt when I&rsquo;m connected to it via ssh I use the gruvbox theme. That can be found here: <a href=https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/gruvbox.omp.json>https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/gruvbox.omp.json</a></p><p>And the paste:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;$schema&#34;</span>: <span style=color:#e6db74>&#34;https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;blocks&#34;</span>: [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;alignment&#34;</span>: <span style=color:#e6db74>&#34;left&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;segments&#34;</span>: [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#3A3A3A&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#ffffff&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34;{{ if .WSL }}WSL at{{ end }} {{.Icon}} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;os&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#458588&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#282828&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;full&#34;</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; {{ .Path }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;path&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#98971A&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background_templates&#34;</span>: [
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;{{ if gt .Ahead 0 }}#B388FF{{ end }}&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;{{ if gt .Behind 0 }}#B388FF{{ end }}&#34;</span>
+</span></span><span style=display:flex><span>          ],
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#282828&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;leading_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b6&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;branch_max_length&#34;</span>: <span style=color:#ae81ff>25</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_stash_count&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_status&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;branch_icon&#34;</span>: <span style=color:#e6db74>&#34;\uE0A0 &#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;branch_identical_icon&#34;</span>: <span style=color:#e6db74>&#34;\u25CF&#34;</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;trailing_diamond&#34;</span>: <span style=color:#e6db74>&#34;\ue0b4&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;git&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#8ED1F7&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#111111&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_version&#34;</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \ue626 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;go&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#4063D8&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#111111&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_version&#34;</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \ue624 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;julia&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#FFDE57&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#111111&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;display_mode&#34;</span>: <span style=color:#e6db74>&#34;files&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_virtual_env&#34;</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;python&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#AE1401&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#ffffff&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;display_mode&#34;</span>: <span style=color:#e6db74>&#34;files&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_version&#34;</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;ruby&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#FEAC19&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#ffffff&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;display_mode&#34;</span>: <span style=color:#e6db74>&#34;files&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;fetch_version&#34;</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \uf0e7{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;azfunc&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background_templates&#34;</span>: [
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;{{if contains \&#34;default\&#34; .Profile}}#FFA400{{end}}&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;{{if contains \&#34;jan\&#34; .Profile}}#f1184c{{end}}&#34;</span>
+</span></span><span style=display:flex><span>          ],
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#ffffff&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;properties&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;display_default&#34;</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>          },
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;aws&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;background&#34;</span>: <span style=color:#e6db74>&#34;#ffff66&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;foreground&#34;</span>: <span style=color:#e6db74>&#34;#111111&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;powerline_symbol&#34;</span>: <span style=color:#e6db74>&#34;\ue0b0&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;style&#34;</span>: <span style=color:#e6db74>&#34;powerline&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;template&#34;</span>: <span style=color:#e6db74>&#34; \uf0ad &#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;root&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;prompt&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  ],
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;console_title_template&#34;</span>: <span style=color:#e6db74>&#34;{{ .Folder }}&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;final_space&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>For the <code>.bashrc</code> I&rsquo;ve added:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>eval <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>oh-my-posh init bash --config /home/alex/.config/ohmyphosh/themes/gruvbox.omp.json<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><p>Simple, right? I have a lot more configurations that I&rsquo;ve done in terminals alone, but unfortunately this is already obnoxiously long and I&rsquo;m bored.</p><hr><h3 id=ubrief-final-thoughtsu>Brief final thoughts:</h3><p>See simplicity is beautiful and the limit is near limitless with proper documentation and enough caffeine. Most programs, tools, utils, applications, etc are made to be used and understood very simply but people for some reason over complicate everything. Why? I have no idea. Doesn&rsquo;t make anyone seem or look smarter. It makes them look like a pseudo-intellect and stupid to me. Sure a bit harsh, but I&rsquo;m not going to sugar coat anything and I&rsquo;m also honest. What works for me might not work for you and figuring out what does work for you is really interesting and definitely rewarding if you take the time to try new things and get out of your comfort zone.</p></div><div class=post-footer></div></article></main></body></html>
