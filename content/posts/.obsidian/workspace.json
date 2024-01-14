@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Current Hardware Sucks.md",
+                "file": "templates/general template.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Current Hardware Sucks.md",
+                "file": "templates/general template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Current Hardware Sucks.md",
+                "file": "templates/general template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Current Hardware Sucks.md"
+                "file": "templates/general template.md"
               }
             }
           }
@@ -149,8 +149,8 @@
   "active": "0b48e389cee4ae43",
   "lastOpenFiles": [
     "About me.md",
-    "Current Hardware Sucks.md",
     "templates/general template.md",
+    "Current Hardware Sucks.md",
     "templates",
     "templates/template general.md",
     "templates"

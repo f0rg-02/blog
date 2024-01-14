@@ -1,5 +1,5 @@
 +++
-title: '{{title}}'
-date: {{date}}
-draft: false
+title = '{{title}}'
+date = {{date}}
+draft = false
 +++

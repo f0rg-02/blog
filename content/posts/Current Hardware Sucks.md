@@ -1,7 +1,7 @@
 +++
-title: 'Opinion: Current Hardware Sucks'
-date: 2024-01-13
-draft: false
+title = 'Opinion: Current Hardware Sucks'
+date = 2024-01-13
+draft = false
 +++
 
 **DISCLAIMER: THIS IS NOT TO OFFEND ANYONE AND THIS IS MY OWN PRIVATE BLOG SO I WILL SAY SOMETHINGS THAT MAY OR MAY NOT BE TRIGGERING OR "UNPROFESSIONAL".**
