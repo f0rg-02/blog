@@ -1,7 +1,7 @@
 baseURL = 'https://f0rg-02.github.io/blog'
 languageCode = "en-us"
 title = "f0rg's boring blog"
-theme = ["photophobia"]
+theme = ["m10c"]
 
 [params]
   author = "Alex"
