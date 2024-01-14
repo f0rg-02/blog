@@ -7,7 +7,9 @@ draft = false
 Who am I (cliche I know):
 
 Name: Alex/f0rg
+
 What do I do? Eating, sleeping, computers, being boring.
+
 What do you love? Hardware, the colors red and orange (burnt orange is bae), eating (it is the way to my heart)
 
 Oh did I mention I love hardware? Oh I also love ducks.
