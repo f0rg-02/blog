@@ -5,7 +5,7 @@ theme = ["m10c"]
 
 
 [params]
-  avatar = "img/avatar.jpg"
+  avatar = "img/avatar.webp"
   author = "Alex"
   description = "A blog about whatever I feel like writing."
 
