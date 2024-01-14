@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "f0rg's boring blog"
 theme = ["m10c"]
 
+
 [params]
+  avatar = "/home/alex/Pictures/astronaut/956f67ad74babf3f9bf11e3f6037ec38.jpg"
   author = "Alex"
   description = "A blog about whatever I feel like writing."
 
