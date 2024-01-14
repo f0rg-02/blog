@@ -11,8 +11,12 @@
             "id": "0acb6bd660b2029e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "templates/general template.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about/_index.md",
+                "file": "templates/general template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "about/_index.md",
+                "file": "templates/general template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about/_index.md"
+                "file": "templates/general template.md"
               }
             }
           }
@@ -142,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5754b8f4243cda6d",
+  "active": "0acb6bd660b2029e",
   "lastOpenFiles": [
     "templates/general template.md",
     "about/aboutme.md",
