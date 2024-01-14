@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "450f874c259246b0",
+        "id": "1a9c5878a9ca1517",
         "type": "tabs",
         "children": [
           {
-            "id": "bd1390ee82b3b1cd",
+            "id": "0acb6bd660b2029e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Opinions/Current Hardware Sucks.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 333
   },
   "right": {
     "id": "fff93b9a3d75b8bc",
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Opinions/Current Hardware Sucks.md",
+                "file": "about/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Opinions/Current Hardware Sucks.md",
+                "file": "about/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Opinions/Current Hardware Sucks.md"
+                "file": "about/_index.md"
               }
             }
           }
@@ -146,15 +142,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd1390ee82b3b1cd",
+  "active": "5754b8f4243cda6d",
   "lastOpenFiles": [
-    "about/_index.md",
+    "templates/general template.md",
     "about/aboutme.md",
+    "_index.md",
+    "Opinions/current_hardware_sucks.md",
+    "templates",
+    "about/_index.md",
     "about",
     "aboutme.md",
     "About/_index.md",
     "Opinions/_index.md",
-    "_index.md",
     "About/About me.md",
     "About/aboutme.md",
     "index.md",
