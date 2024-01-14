@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "About/About me.md",
+                "file": "Opinions/Current Hardware Sucks.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "About/About me.md",
+                "file": "Opinions/Current Hardware Sucks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "About/About me.md",
+                "file": "Opinions/Current Hardware Sucks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "About/About me.md"
+                "file": "Opinions/Current Hardware Sucks.md"
               }
             }
           }
@@ -148,16 +148,21 @@
   },
   "active": "bd1390ee82b3b1cd",
   "lastOpenFiles": [
-    "Opinions/_index.md",
+    "about/_index.md",
+    "about/aboutme.md",
+    "about",
+    "aboutme.md",
     "About/_index.md",
+    "Opinions/_index.md",
     "_index.md",
+    "About/About me.md",
+    "About/aboutme.md",
     "index.md",
     "About/index.md",
     "Opinions/index.md",
     "Current Hardware Sucks.md",
     "Opinions/Current Hardware Sucks.md",
     "Opinions",
-    "About/About me.md",
     "About",
     "About me.md",
     "{{<.md"

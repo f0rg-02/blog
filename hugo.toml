@@ -19,14 +19,6 @@ theme = ["m10c"]
     name = "Mastodon"
     url = "https://infosec.exchange/@alex_02"
 
-[permalinks]
-	[permalinks.page]
-		posts = '/articles/:year/:month/:slug/'
-		about = '/about/:slug/'
-	[permalinks.section]
-    		posts = '/articles/'
-    		about = '/about/'
-	
 [menus]
 [[menus.main]]
     name = 'Home'
@@ -34,6 +26,5 @@ theme = ["m10c"]
     weight = 1
 [[menus.main]]
     name = 'About'
-    pageRef = '/about/'
-    wegight = 2
-
+    pageRef = '/posts/about/aboutme'
+    weight = 2

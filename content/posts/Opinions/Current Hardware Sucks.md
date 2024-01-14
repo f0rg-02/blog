@@ -8,7 +8,7 @@ draft = false
 
 ------
 
-As I stated in my [About me]({{< ref "About me.md" >}} "About me") I love hardware. I have a long list of toys that I want to buy to play with and this is probably the main reason why I am broke, but just to do a quick overview on my rant on some annoyances that I've recently been seeing with computers and hardware.
+As I stated in my [About me]({{< ref "aboutme.md" >}} "About me") I love hardware. I have a long list of toys that I want to buy to play with and this is probably the main reason why I am broke, but just to do a quick overview on my rant on some annoyances that I've recently been seeing with computers and hardware.
 
 ------
 
