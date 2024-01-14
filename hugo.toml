@@ -22,8 +22,10 @@ theme = ["m10c"]
 [permalinks]
 	[permalinks.page]
 		posts = '/articles/:year/:month/:slug/'
+		about = '/about/:slug/'
 	[permalinks.section]
     		posts = '/articles/'
+    		about = '/about/'
 	
 [menus]
 [[menus.main]]
