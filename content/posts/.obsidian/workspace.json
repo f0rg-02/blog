@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/general template.md",
-                "mode": "preview",
+                "file": "Linux/Terminals.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/general template.md",
+                "file": "Linux/Terminals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/general template.md",
+                "file": "Linux/Terminals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/general template.md"
+                "file": "Linux/Terminals.md"
               }
             }
           }
@@ -148,13 +148,16 @@
   },
   "active": "0acb6bd660b2029e",
   "lastOpenFiles": [
+    "Opinions/current_hardware_sucks.md",
+    "Linux/Terminals.md",
+    "{{<.md",
+    "about/aboutme.md",
+    "Linux/_index.md",
+    "Linux",
     "_index.md",
     "templates/general template.md",
-    "Opinions/current_hardware_sucks.md",
-    "templates/general template.md",
     "templates",
     "templates",
-    "about/aboutme.md",
     "templates",
     "about/_index.md",
     "about",
@@ -170,7 +173,6 @@
     "Opinions/Current Hardware Sucks.md",
     "Opinions",
     "About",
-    "About me.md",
-    "{{<.md"
+    "About me.md"
   ]
 }

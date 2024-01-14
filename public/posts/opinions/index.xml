@@ -2,19 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>f0rg&#39;s blog</title>
-    <link>https://f0rg-02.github.io/blog/</link>
+    <link>https://f0rg-02.github.io/blog/posts/opinions/</link>
     <description>Recent content on f0rg&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jan 2024 15:45:21 -0500</lastBuildDate>
-    <atom:link href="https://f0rg-02.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Terminals</title>
-      <link>https://f0rg-02.github.io/blog/posts/linux/terminals/</link>
-      <pubDate>Sun, 14 Jan 2024 15:45:21 -0500</pubDate>
-      <guid>https://f0rg-02.github.io/blog/posts/linux/terminals/</guid>
-      <description>NOTE: I decided to add both links and also paste configs. So there is a lot of &amp;ldquo;useless&amp;rdquo; stuff in here, but I think having a variety is important.&#xA;My Scattered Thoughts: I love Linux. You can do anything with it, but most importantly that there are usually many options for one thing like terminals that there is something for everyone. After way too many times spent on computers (I really should go outside more, but the weather is shit right now), I&amp;rsquo;ve come up with a workflow and environment that works for me.</description>
-    </item>
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://f0rg-02.github.io/blog/posts/opinions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Opinion: Current Hardware Sucks</title>
       <link>https://f0rg-02.github.io/blog/posts/opinions/current_hardware_sucks/</link>
