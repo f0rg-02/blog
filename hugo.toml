@@ -18,3 +18,19 @@ theme = ["m10c"]
     icon = "mastodon"
     name = "Mastodon"
     url = "https://infosec.exchange/@alex_02"
+
+[permalinks]
+	[permalinks.page]
+		posts = '/articles/:year/:month/:slug/'
+		about = '/About/:slug/'
+	[permalinks.section]
+    		posts = '/articles/'
+    		about = '/about/'
+
+	
+[menus]
+[[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+
